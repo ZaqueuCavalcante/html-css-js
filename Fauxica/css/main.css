@@ -48,6 +48,16 @@ nav ul li a.active:before {
     border-bottom: 2px solid black;
 }
 
+nav ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    bottom: 0;
+    border-bottom: 2px solid black;
+    transition: width .5s;
+}
+
 main {
     display: flex;
     gap: 8em;
@@ -94,6 +104,7 @@ h1 {
 
 .secundary-cta img {
     width: 20px;
+    transition: transform .5s;
 }
 
 .news {
@@ -143,6 +154,7 @@ h1 {
     display: flex;
     align-items: end;
     background-size: 150%;
+    transition: background-size .8s;
 }
 
 .card1 {
@@ -178,6 +190,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: transform .8s;
 }
 
 .product-title {
@@ -195,3 +208,31 @@ h1 {
 p.product-price {
     font-size: 1.8rem;
 }
+
+/* Animations */
+
+nav ul li a:hover:before {
+    width: 35%;
+}
+
+.primary-cta:hover {
+    background: #e3e0c7;
+}
+
+.secundary-cta:hover img {
+    transform: translateX(10px);
+}
+
+.secundary-cta:hover {
+    text-decoration: underline;
+}
+
+.card:hover {
+    background-size: 160%;
+}
+
+.card:hover .card-details {
+    transform: translateY(-20px);
+}
+
+
